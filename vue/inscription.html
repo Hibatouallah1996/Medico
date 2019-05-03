@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<link rel="apple-touch-icon" sizes="76x76" href="style/assets/img/apple-icon.png" />
+	<!--<link rel="icon" type="image/png" href="style/assets/img/favicon.png" />-->
+	<title>Page d'inscription</title>
+
+	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="viewport" content="width=device-width" />
+
+	<!-- Canonical SEO -->
+    <link rel="canonical" href="https://www.creative-tim.com/product/paper-bootstrap-wizard"/>
+
+    <meta name="keywords" content="wizard, bootstrap wizard, creative tim, long forms, 3 step wizard, sign up wizard, beautiful wizard, long forms wizard, wizard with validation, paper design, paper wizard bootstrap, bootstrap paper wizard">
+    <meta name="description" content="Paper Bootstrap Wizard is a fully responsive wizard that is inspired by our famous Paper Kit  and comes with 3 useful examples and 5 colors.">
+
+    <!-- Schema.org markup for Google+ -->
+    <meta itemprop="name" content="Paper Bootstrap Wizard by Creative Tim">
+    <meta itemprop="description" content="Paper Bootstrap Wizard is a fully responsive wizard that is inspired by our famous Paper Kit  and comes with 3 useful examples and 5 colors.">
+    <meta itemprop="image" content="https://s3.amazonaws.com/creativetim_bucket/products/49/opt_pbw_thumbnail.jpg">
+
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@creativetim">
+    <meta name="twitter:title" content="Paper Bootstrap Wizard by Creative Tim">
+    <meta name="twitter:description" content="Paper Bootstrap Wizard is a fully responsive wizard that is inspired by our famous Paper Kit  and comes with 3 useful examples and 5 colors.">
+    <meta name="twitter:creator" content="@creativetim">
+    <meta name="twitter:image" content="https://s3.amazonaws.com/creativetim_bucket/products/49/opt_pbw_thumbnail.jpg">
+
+    <!-- Open Graph data -->
+    <meta property="og:title" content="Paper Bootstrap Wizard by Creative Tim | Free Boostrap Wizard" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://demos.creative-tim.com/paper-bootstrap-wizard/wizard-list-place.html" />
+    <meta property="og:image" content="https://s3.amazonaws.com/creativetim_bucket/products/49/opt_pbw_thumbnail.jpg" />
+    <meta property="og:description" content="Paper Bootstrap Wizard is a fully responsive wizard that is inspired by our famous Paper Kit  and comes with 3 useful examples and 5 colors." />
+    <meta property="og:site_name" content="Creative Tim" />
+
+	<!-- CSS Files -->
+    <link href="style/assets/css/bootstrap.min.css" rel="stylesheet" />
+	<link href="style/assets/css/paper-bootstrap-wizard.css" rel="stylesheet" />
+
+	<!-- CSS Just for demo purpose, don't include it in your project -->
+	<link href="style/assets/css/demo.css" rel="stylesheet" />
+
+	<!-- Fonts and Icons -->
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.css" rel="stylesheet">
+	<link href='https://fonts.googleapis.com/css?family=Muli:400,300' rel='stylesheet' type='text/css'>
+	<link href="style/assets/css/themify-icons.css" rel="stylesheet">
+	<!-- Google Tag Manager -->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-NKDMSK6');</script>
+	<!-- End Google Tag Manager -->
+	</head>
+
+	<body>
+		<!-- Google Tag Manager (noscript) -->
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NKDMSK6"
+	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- End Google Tag Manager (noscript) -->
+	<div class="image-container set-full-height" style="background-image: url('style/assets/img/paper-1.jpeg')">
+	    <!--   Creative Tim Branding   -->
+	    <a href="index.html">
+	         <div class="logo-container">
+	            <div class="logo">
+					<!--<img src="style/assets/img/new_logo.png">-->
+	            </div>
+	            <div class="brand">
+	                Medico
+	            </div>
+	        </div>
+	    </a>
+
+		<!--  Made With Paper Kit 
+		<a href="https://demos.creative-tim.com/paper-kit" class="made-with-pk">
+			<div class="brand">PK</div>
+			<div class="made-with">Made with <strong>Paper Kit</strong></div>
+		</a> -->
+
+	    <!--   Big container   -->
+	    <div class="container">
+	        <div class="row">
+		        <div class="col-sm-8 col-sm-offset-2">
+
+		            <!--      Wizard container        -->
+		            <div class="wizard-container">
+
+		                <div class="card wizard-card" data-color="orange" id="wizardProfile">
+		                    <form action="../controller/Inscription.php" method="POST">
+		                <!--        You can switch " data-color="orange" "  with one of the next bright colors: "blue", "green", "orange", "red", "azure"          -->
+
+		                    	<div class="wizard-header text-center">
+		                        	<h3 class="wizard-title">Creer votre compte </h3>
+									<p class="category">.</p>
+		                    	</div>
+
+								<div class="wizard-navigation">
+									<div class="progress-with-circle">
+									     <div class="progress-bar" role="progressbar" aria-valuenow="1" aria-valuemin="1" aria-valuemax="3" style="width: 21%;"></div>
+									</div>
+									<ul>
+			                            <li>
+											<a href="#informations" data-toggle="tab">
+												<div class="icon-circle">
+													<i class="ti-user"></i>
+												</div>
+												 informations personnelles
+											</a>
+										</li>
+			                            <li>
+											<a href="#login" data-toggle="tab">
+												<div class="icon-circle">
+													<i class="ti-settings"></i>
+												</div>
+												 login et password
+											</a>
+										</li>
+			                            <li>
+											<a href="#Adresses" data-toggle="tab">
+												<div class="icon-circle">
+													<i class="ti-map"></i>
+												</div>
+												 Adresses
+											</a>
+										</li>
+			                        </ul>
+								</div>
+		                        <div class="tab-content">
+		                            <div class="tab-pane" id="informations">
+		                            	<div class="row">
+											<h5 class="info-text"> Remplissez ce formualire svp !.</h5>
+											<div class="col-sm-4 col-sm-offset-1">
+												<div class="picture-container">
+													<div class="picture">
+														<img src="style/assets/img/default-avatar.jpg" class="picture-src" id="wizardPicturePreview" title="" />
+														<input type="file" id="wizard-picture">
+													</div>
+													<h6>Choisir votre photo</h6>
+												</div>
+											</div>
+											<div class="col-sm-6">
+												<div class="form-group">
+													<label>Nom <small>(required)</small></label>
+													<input name="nom" type="text" class="form-control" placeholder="Votre nom....">
+												</div>
+												<div class="form-group">
+													<label>Prénom <small>(required)</small></label>
+													<input name="prenom" type="text" class="form-control" placeholder="votre prénom...">
+												</div>
+												<div class="form-group">
+													<label>CIN <small>(required)</small></label>
+													<input name="CIN" type="text" class="form-control" placeholder="votre CIN...">
+												</div>
+												<div class="form-group">
+													<label>tél <small>(required)</small></label>
+													<input name="tel" type="text" class="form-control" placeholder="votre num de tél...">
+												</div>
+												<div class="form-group">
+													<label>date de naissance <small>(required)</small></label>
+													<input name="dt" type="date" class="form-control" placeholder="votre date de naissance...">
+												</div>
+												<div class="form-group">
+													<label>Situation familiale <small>(required)</small></label>
+													<select name="SF" class="form-control">
+														<option>Célibataire</option>
+														<option>Marié</option>
+													</select>
+												</div>
+												<div class="form-group">
+													<label>Sexe <small>(required)</small></label>
+													<select  name="Sexe"  class="form-control">
+														<option>Femme</option>
+														<option>Homme</option>
+													</select>
+												</div>
+												
+											</div>
+											<div class="col-sm-10 col-sm-offset-1">
+												<div class="form-group">
+													<label>Email <small>(required)</small></label>
+													<input name="email" type="email" class="form-control" placeholder="votre émail.....">
+												</div>
+											</div>
+										</div>
+		                            </div>
+		                            <div class="tab-pane" id="login">
+		                                <h5 class="info-text">Donner votre login et password svp! </h5>
+		                                <div class="row">
+		                                    <div class="col-sm-8 col-sm-offset-2">
+												
+													<div class="form-group">
+														<label>Login <small>(required)</small></label>
+														<input name="login" type="text" class="form-control" placeholder="Votre login....">
+													</div>
+													<div class="form-group">
+														<label>Password <small>(required)</small></label>
+														<input name="password" type="text" class="form-control" placeholder="votre password...">
+													</div>
+		                                        
+		                                    </div>
+		                                </div>
+		                            </div>
+		                            <div class="tab-pane" id="Adresses">
+		                                <div class="row">
+		                                    <div class="col-sm-12">
+		                                        <h5 class="info-text"> donner vos informations complèmentaires svp! </h5>
+		                                    </div>
+		                                    <div class="col-sm-7 col-sm-offset-1">
+		                                    	<div class="form-group">
+		                                            <label>Adresses</label>
+		                                            <input name="adresse" type="text" class="form-control" placeholder="5h Avenue">
+		                                        </div>
+		                                    </div>
+		                                    <div class="col-sm-3">
+		                                        <div class="form-group">
+		                                            <label>Ville</label>
+		                                            <input name="ville" type="text" class="form-control" placeholder="Agadir...">
+		                                        </div>
+		                                    </div>
+		                                    
+		                                    
+		                                </div>
+		                            </div>
+		                        </div>
+		                        <div class="wizard-footer">
+		                            <div class="pull-right">
+		                                <input type='button' class='btn btn-next btn-fill btn-warning btn-wd' name='next' value='Next' />
+		                                <input type='submit' class='btn btn-finish btn-fill btn-warning btn-wd' name='finish' value='Finish' />
+		                            </div>
+
+		                            <div class="pull-left">
+		                                <input type='button' class='btn btn-previous btn-default btn-wd' name='previous' value='Previous' />
+		                            </div>
+		                            <div class="clearfix"></div>
+		                        </div>
+		                    </form>
+		                </div>
+		            </div> <!-- wizard container -->
+		        </div>
+	    	</div><!-- end row -->
+		</div> <!--  big container -->
+		
+	    <div class="footer">
+	        <div class="container text-center">
+				&copy;<script>document.write(new Date().getFullYear());</script> Medico .<a href="index.php">Tous droits réservés</a>.</div>
+	    </div>
+		<div class="fixed-plugin">
+			
+	</div>
+
+</body>
+
+	<!--   Core JS Files   -->
+	<script src="style/assets/js/jquery-2.2.4.min.js" type="text/javascript"></script>
+	<script src="style/assets/js/bootstrap.min.js" type="text/javascript"></script>
+	<script src="style/assets/js/jquery.bootstrap.wizard.js" type="text/javascript"></script>
+
+	<!--  Plugin for the Wizard -->
+	<script src="style/assets/js/demo.js" type="text/javascript"></script>
+	<script src="style/assets/js/paper-bootstrap-wizard.js" type="text/javascript"></script>
+
+	<!--  More information about jquery.validate here: https://jqueryvalidation.org/	 -->
+	<script src="style/assets/js/jquery.validate.min.js" type="text/javascript"></script>
+
+</html>
