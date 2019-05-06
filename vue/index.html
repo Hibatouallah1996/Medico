@@ -53,6 +53,7 @@
         <li><a href="#contact" class="page-scroll">Contacter-Nous</a></li>
         <li><a href="inscription.html" class="page-scroll">S'inscrir</a></li>
         <li><a href="login.html" class="page-scroll">S'authentifier</a></li>
+        <li><a href="Profile.php" class="page-scroll">Mon profile</a></li>
       </ul>
     </div>
     <!-- /.navbar-collapse --> 
@@ -125,28 +126,28 @@
           <h2>Contacter-Nous</h2>
           <p>Un besoin, une question, contactez-nous ! Nous serons ravis de venir vous faire une démonstration.</p>
         </div>
-        <form  action="../controller/contacter.php" method="post" >
+        <form  action="../controller/contacter.php" method="post" name="formupload" >
             <div class="row">
                
               <div class="col-md-6">
                 <div class="form-group">
-                  <input type="text" id="name" class="form-control" placeholder="Name" required="required">
+                  <input type="text" name="nom" id="name" class="form-control" placeholder="nom" required="required">
                  
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form-group">
-                  <input type="email" id="email" class="form-control" placeholder="Email" required="required">
+                  <input type="email" name="email" id="email" class="form-control" placeholder="email" required="required">
                  
                 </div>
               </div>
             </div>
             <div class="form-group">
-              <textarea name="message" id="message" class="form-control" rows="4" placeholder="Message" required></textarea>
+              <textarea name="message" id="message" class="form-control" rows="4" placeholder="message" required></textarea>
             
             </div>
             
-            <button type="submit" class="btn btn-custom btn-lg">Send Message</button>
+            <button type="submit" class="btn btn-custom btn-lg" onclick="fo()">Send Message</button>
           </form>
       </div>
     
@@ -162,7 +163,7 @@
         <p><span>Phone</span>  05290-04466</p>
       </div>
       <div class="contact-item">
-        <p><span>Email</span> medicoplatform@gmail.com</p>
+        <p><span>Email</span> platformmedico2019@gmail.com</p>
       </div>
     </div>
     <div class="col-md-12">
@@ -192,5 +193,11 @@
 <script type="text/javascript" src="style/js/jqBootstrapValidation.js"></script> 
 <script type="text/javascript" src="style/js/contact_me.js"></script> 
 <script type="text/javascript" src="style/js/main.js"></script>
+<script type="text/javascript">
+function fo()
+{
+  document.formupload.submit();
+}
+</script>
 </body>
 </html>

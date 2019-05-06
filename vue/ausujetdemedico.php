@@ -1,17 +1,6 @@
 <?php
 session_start();
 
-if(!isset($_SESSION['login'])&& !isset($_SESSION['password']))
-{
-	?>
-										<script type="text/javascript">
-											alert("Vous n'êtes pas connecté!!");
-											window.location.replace("login.html"); 
-										</script>
-
-										<?php
-}
-
 ?>
 
 <!DOCTYPE HTML>
@@ -77,8 +66,8 @@ if(!isset($_SESSION['login'])&& !isset($_SESSION['password']))
 				<center><h2 >Medico</h2></center>
 				  
 		   </a>
-				<div class="author-img" style="background-image: url(style/img/apropos.jpg);"></div>
-				<h1 id="colorlib-logo"><a href="index.html"><?php echo $_SESSION['Nom'] ;?> <?php echo $_SESSION['Prenom'] ;?> </a></h1>
+			 <div class="author-img" style="background-image: url(style/img/apropos.jpg);"></div>
+             <h1 id="colorlib-logo"><a href="index.html"><?php echo $_SESSION['Nom'] ;?> <?php echo $_SESSION['Prenom'] ;?> </a></h1>
 				
 			</div>
 			<nav id="colorlib-main-menu" role="navigation" class="navbar">
@@ -88,7 +77,7 @@ if(!isset($_SESSION['login'])&& !isset($_SESSION['password']))
 						<li><a href="#" data-nav-section="about">Commencer un Examen</a></li>
 						<li><a href="InformationsPatient.php" data-nav-section="">Mon Profile</a></li>
 						<li><a href="#" data-nav-section="skills"></a>Mes examens</li>
-						<li><a href="ausujetdemedico.php" data-nav-section="education">Au sujet de Medico</a></li>
+						<li><a href="ausujetdemedico.html" data-nav-section="education">Au sujet de Medico</a></li>
 						<li><a href="contacterpatient.php" data-nav-section="contact">Contactez-nous</a></li>
 						<li><a href="../model/Deconnection.php" data-nav-section="contact">Deconecter</a></li>
 					</ul>
@@ -104,19 +93,30 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> Medic
 
 		</aside>
 
-		<div id="colorlib-main" >
+		<div id="colorlib-main">
 			<section id="colorlib-hero" class="js-fullheight" data-section="home">
 				<div class="flexslider js-fullheight">
 					<ul class="slides">
-				   	<li>
+				   	<li style="background-image: url(style/img/P1.jpg);">
 				   		<div class="overlay"></div>
-				   		<div class="container-fluid" >
-				   			<div class="row" >
-					   			<div class="col-xs-12 js-fullheight slider-text" >
+				   		<div class="container-fluid">
+				   			<div class="row">
+					   			<div class="col-xs-12 js-fullheight slider-text">
 					   				
 					   				<br><br><br><br><br><br>
-						   					<h1>Bonjour <?php echo $_SESSION['Nom'] ;?> <?php echo $_SESSION['Prenom'] ;?></h1>
-						   		
+                                              
+                                       <form action="../controller/ausujet.php" method="POST">
+                                        <div class="form-group">
+                                          <label for="exampleInputEmail1">Sujet:</label>
+                                          <input type="text" name="sujet" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter le sujet">
+                                         
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleFormControlTextarea1">description</label>
+                                            <textarea class="form-control" name="description" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                          </div>
+                                        <button type="submit" class="btn btn-primary">Submit</button>
+                                      </form>
 					   			</div>
 					   		</div>
 				   		</div>

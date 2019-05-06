@@ -67,7 +67,7 @@ session_start();
 				<center><h2 >Medico</h2></center>
 				  
 		   </a>
-				<div class="author-img" style="background-image: url(images/about.jpg);"></div>
+			<div class="author-img" style="background-image: url(style/img/apropos.jpg);"></div>
 				<h1 id="colorlib-logo"><a href="index.html"><?php echo $_SESSION['Nom'] ;?> <?php echo $_SESSION['Prenom'] ;?> </a></h1>
 				
 			</div>
@@ -75,10 +75,10 @@ session_start();
 				<div  class="collapse">
 					<ul>
 		
-						<li><a href="#" data-nav-section="about">Commencer un Examen</a></li>
-						<li><a href="#" data-nav-section="InformationsPatient.php">Mon Profile</a></li>
+					<li><a href="#" data-nav-section="about">Commencer un Examen</a></li>
+						<li><a href="InformationsPatient.php" data-nav-section="">Mon Profile</a></li>
 						<li><a href="#" data-nav-section="skills"></a>Mes examens</li>
-						<li><a href="#" data-nav-section="education">Au sujet de Medico</a></li>
+						<li><a href="ausujetdemedico.php" data-nav-section="education">Au sujet de Medico</a></li>
 						<li><a href="#" data-nav-section="contact">Contactez-nous</a></li>
 						<li><a href="../model/Deconnection.php" data-nav-section="contact">Deconecter</a></li>
 					</ul>
@@ -134,7 +134,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> Medic
                          <div class="form-group">
                             <label class="col-md-4 control-label">Date de naissance</label>
                             <div class="col-md-8 inputGroupContainer">
-                               <div class="input-group"><input id="city" name="dt"  class="form-control" required="true" value="<?php echo $_SESSION['dt'] ?>"type="text"></div>
+                               <div class="input-group"><input id="city" name="dt"  class="form-control" required="true" value="<?php echo $_SESSION['dt_naiss'] ?>"type="text"></div>
                             </div>
                          </div>
                          
@@ -149,7 +149,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> Medic
                         <div class="form-group">
                             <label class="col-md-4 control-label">Sexe</label>
                             <div class="col-md-8 inputGroupContainer">
-                               <div class="input-group"><input id="fullName" name="sexe"  class="form-control" required="true" value="<?php echo $_SESSION['sexe'] ?>" type="text"></div>
+                               <div class="input-group"><input id="fullName" name="sexe"  class="form-control" required="true" value="<?php echo $_SESSION['sex'] ?>" type="text"></div>
                             </div>
                          </div>
                          <div class="form-group">

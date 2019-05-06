@@ -96,7 +96,7 @@ class utilisateur
 
             $bd=$con->connecter($serveur,$bd,$loginbd,$password);
             $actif='1';
-            var_dump($CIN);
+         
             $req1 = $bd->prepare('UPDATE pfe_schema.utilisateur set "Actif"=:actif WHERE "CIN"=:CIN');
             $req1->execute(array(
                'actif'=>$actif,
@@ -165,7 +165,7 @@ class utilisateur
                                     $mail->isSMTP();                                      // Set mailer to use SMTP
                                     $mail->Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
                                     $mail->SMTPAuth = true;                               // Enable SMTP authentication
-                                    $mail->Username = 'medicoplatform@gmail.com';                 // SMTP username
+                                    $mail->Username = 'platformmedico2019@gmail.com';                 // SMTP username
                                     $mail->Password = 'HCK_MEDICO2019';                           // SMTP password
                                     $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
                                     $mail->Port = 587;  
@@ -177,7 +177,7 @@ class utilisateur
                                     )
                                     );                                  // TCP port to connect to
                                     
-                                    $mail->setFrom('medicoplatform@gmail.com', 'Medico');
+                                    $mail->setFrom('platformmedico2019@gmail.com', 'Medico');
                                     $mail->addAddress($email);     // Add a recipient
                                     //$mail->addAddress('ellen@example.com');               // Name is optional
                                     //$mail->addReplyTo('info@example.com', 'Information');
@@ -248,7 +248,7 @@ class utilisateur
                                         }
                                         else{
                                             echo"authentificatin reussie";
-                                        $_SESSION['login'] =$login;
+                                       
 
 										?>
 										<script type="text/javascript">
@@ -293,6 +293,19 @@ class utilisateur
 		                         
 									if($donnees!=null)
 									{
+                                        session_start();
+                                        $_SESSION['Nom']=$donnees['Nom'];
+                                        $_SESSION['Prenom']=$donnees['Prenom'];
+                                        $_SESSION['CIN']=$donnees['CIN'];
+                                        $_SESSION['tel']=$donnees['tel'];
+                                        $_SESSION['dt_naiss']=$donnees['dt_naiss'];
+                                        $_SESSION['email']=$donnees['email'];
+                                        $_SESSION['Adresse']=$donnees['Adresse'];
+                                        $_SESSION['SF']=$donnees['SF'];
+                                        $_SESSION['ville']=$donnees['ville'];
+                                        $_SESSION['sex']=$donnees['sex'];
+                                        $_SESSION['login']=$donnees['login'];
+                                        $_SESSION['password']=$donnees['password'];
 										?>
 										<script type="text/javascript">
 					
@@ -341,7 +354,12 @@ window.location.replace("../vue/Profile.php?Nom=<?php echo $donnees['Nom']?>& Pr
                    'sex'=>$Sexe,
                    'CIN'=>$CIN,
                 ));
-   
+                $req1 = $bd->prepare('SELECT * FROM pfe_schema.utilisateur WHERE CIN=?');
+                $req1->execute(array($CIN));
+    
+    
+              
+                $donnees1 = $req1->fetch();
   
                 }		catch(Exception $e) //en cas d'erreur
                                     {
@@ -359,11 +377,23 @@ window.location.replace("../vue/Profile.php?Nom=<?php echo $donnees['Nom']?>& Pr
                                                 <?php
                                                         exit();
                                     }
-                                  
+                              
+                                    $_SESSION['Nom']=$donnees1['Nom'];
+                                    $_SESSION['Prenom']=$donnees1['Prenom'];
+                                    $_SESSION['CIN']=$donnees1['CIN'];
+                                    $_SESSION['tel']=$donnees1['tel'];
+                                    $_SESSION['dt_naiss']=$donnees1['dt_naiss'];
+                                    $_SESSION['email']=$donnees1['email'];
+                                    $_SESSION['Adresse']=$donnees1['Adresse'];
+                                    $_SESSION['SF']=$donnees1['SF'];
+                                    $_SESSION['ville']=$donnees1['ville'];
+                                    $_SESSION['sex']=$donnees1['sex'];
+                                    $_SESSION['login']=$donnees1['login'];
+                                    $_SESSION['password']=$donnees1['password'];
                             ?>
                                 <script type="text/javascript">
                                     alert("Félicitations! vos informations sont mis à jour avec succès ");
-                                    window.location.replace("../vue/login.html"); 
+                                    window.location.replace("../vue/Profile.php"); 
                                 </script>
                                 <?php
                               
@@ -378,7 +408,7 @@ window.location.replace("../vue/Profile.php?Nom=<?php echo $donnees['Nom']?>& Pr
             $mail->isSMTP();                                      // Set mailer to use SMTP
             $mail->Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
             $mail->SMTPAuth = true;                               // Enable SMTP authentication
-            $mail->Username = 'medicoplatform@gmail.com';                 // SMTP username
+            $mail->Username = 'platformmedico2019@gmail.com';                 // SMTP username
             $mail->Password = 'HCK_MEDICO2019';                           // SMTP password
             $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
             $mail->Port = 587;  
@@ -390,7 +420,7 @@ window.location.replace("../vue/Profile.php?Nom=<?php echo $donnees['Nom']?>& Pr
             )
             );                                  // TCP port to connect to
             
-            $mail->setFrom('medicoplatform@gmail.com', 'Medico');
+            $mail->setFrom('platformmedico2019@gmail.com', 'Medico');
             $mail->addAddress($email);               
             $mail->isHTML(true);                                
             
@@ -474,7 +504,7 @@ window.location.replace("../vue/Profile.php?Nom=<?php echo $donnees['Nom']?>& Pr
             $mail->isSMTP();                                      // Set mailer to use SMTP
             $mail->Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
             $mail->SMTPAuth = true;                               // Enable SMTP authentication
-            $mail->Username = 'medicoplatform@gmail.com';                 // SMTP username
+            $mail->Username = 'platformmedico2019@gmail.com';                 // SMTP username
             $mail->Password = 'HCK_MEDICO2019';                           // SMTP password
             $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
             $mail->Port = 587;  
@@ -486,18 +516,18 @@ window.location.replace("../vue/Profile.php?Nom=<?php echo $donnees['Nom']?>& Pr
             )
             );                                  // TCP port to connect to
             
-            $mail->setFrom('medicoplatform@gmail.com', 'Medico');
-            $mail->addAddress($email);               
+            $mail->setFrom('platformmedico2019@gmail.comm', 'Medico');
+            $mail->addAddress('platformmedico2019@gmail.comm');               
             $mail->isHTML(true);                                
             
-            $mail->Subject = 'Initialisation du mot de passe';
+            $mail->Subject ='Message de '.$nom ;
             $mail->Body  = '
             <html>
             <head>
-               <title>Vous avez réservé sur notre site ...</title>
+               <title> Contactez nous</title>
             </head>
             <body>
-            <p>'.$nom.' a envoyé ce message</p> 
+            <p>'.$nom.' a envoyé ce message!!</p> 
             <p>'.$message.'</p>
             </body>
             </html>';
@@ -511,10 +541,64 @@ window.location.replace("../vue/Profile.php?Nom=<?php echo $donnees['Nom']?>& Pr
                 }
                 ?>
                 <script type="text/javascript">
-                    alert("Consulter votre boite gmail ,pour modifier votre mot de passe ");
+                    alert("Votre message est envoyé avec succés ");
                     window.location.replace("../vue/index.html"); 
                 </script>
                 <?php
+    }
+
+
+    public function contacterprofil($sujet,$description,$email)
+    {
+        $mail = new PHPMailer;
+						
+        //$mail->SMTPDebug = 4;                               // Enable verbose debug output
+        
+        $mail->isSMTP();                                      // Set mailer to use SMTP
+        $mail->Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
+        $mail->SMTPAuth = true;                               // Enable SMTP authentication
+        $mail->Username = 'platformmedico2019@gmail.com';                 // SMTP username
+        $mail->Password = 'HCK_MEDICO2019';                           // SMTP password
+        $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
+        $mail->Port = 587;  
+        $mail->SMTPOptions = array(
+        'ssl' => array(
+        'verify_peer' => false,
+        'verify_peer_name' => false,
+        'allow_self_signed' => true
+        )
+        );                                  // TCP port to connect to
+        
+        $mail->setFrom('platformmedico2019@gmail.com', 'Medico');
+        $mail->addAddress('platformmedico2019@gmail.com');               
+        $mail->isHTML(true);                                
+        
+        $mail->Subject =$sujet ;
+        $mail->Body  = '
+        <html>
+        <head>
+           <title>Au sujet de Medico</title>
+        </head>
+        <body>
+        <p>Au sujet de Medico</p>
+        <p>'.$email.' a envoyé ce message!!</p> 
+        <p>'.$description.'</p>
+        </body>
+        </html>';
+        $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+        
+        if(!$mail->send()) {
+            //echo 'Message could not be sent.';
+            //echo 'Mailer Error: ' . $mail->ErrorInfo;
+            } else {
+            //echo 'Message has been sent';
+            }
+            ?>
+            <script type="text/javascript">
+                alert("Votre message est envoyé avec succés ");
+                window.location.replace("../vue/Profile.php"); 
+            </script>
+            <?php
     }
 }
 
